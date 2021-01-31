@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <input type="text" id="name"> <br>
+    Email: <input type="email" id="email"> <br>
+    Password: <input type="password" id="password"><br>
+    Phone Number: <input type="text" id="pno"><br>
+    <button onclick="signup()">Sign Up</button>
+
+
+
+    <script>
+        function signup()
+        {
+            var name = document.getElementById("name").value;
+            var Email = document.getElementById("email").value;
+            var Password = document.getElementById("password").value;
+            var Phone = document.getElementById("pno").value;
+            var url = "http://localhost:3000/signup/" + name+"/" + Email +"/" + Password +"/" +Phone
+            fetch(url)
+            document.write("Sign Up Successful");
+            
+        }
+    </script>
+</body>
+</html>
